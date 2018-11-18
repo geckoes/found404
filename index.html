@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filippo Taiuti web site</title>
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Rotobo">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.min.js"></script>
+    
+      <!-- nasconde il nav bar di altervista -->
+      <style>
+        #av_toolbar_regdiv, #av_toolbar_iframe, .av_site, .av-antipixel
+        {display: none!important;}
+        body
+        {top: -32px!important;} 
+    </style>
+    <script>
+
+    </script>
+
+    <style>
+      .warning {
+        text-align: center;
+        display: none;
+        background-color: #eee;
+        border: 1px solid black;
+        margin: 10px 20px;
+        padding: 10px 20px;
+      }
+      body {
+        font-size: 16px;
+        font-family: Open Sans, Rotobo, sans-serif;
+      }
+      .title {
+        color: white;
+      }
+      .update {
+        color: grey;
+        font-size: .8em;
+      }
+      article {
+        font-size: 1em;
+      }
+      .mainHeader {
+        background-color: purple;
+      }
+
+      /* On screens that are 991px or less, hide right advertisement and make visible the adv in bottom of the page */
+      @media screen and (max-width: 991px) {
+        #adv2 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body ng-controller="pippoCtrl">
+    <header class="mainHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1"><img src="img/logo_gecko_small.png" alt="logo" /></div>
+          <div class="col-xs-10 col-sm-4 col-md-4 col-lg-3"><h1 class="title">Filippo Taiuti</h1></div>
+          <div class="col-sm-7 col-md-7 col-lg-8">&nbsp;</div>
+        </div>
+      </div>
+
+
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            </ul>
+            <!--            <form class="navbar-form navbar-right">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Filippo Taiuti</a></p>
+-->          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav>
+    </header>
+
+
+    <div align="center"><script>!function(d,l,e,s,c){e=d.createElement("script");e.src="//ad.altervista.org/js.ad/size=728X90/?ref="+encodeURIComponent(l.hostname+l.pathname)+"&r="+Date.now();s=d.scripts;c=s[s.length-1];c.parentNode.insertBefore(e,c)}(document,location)</script></div>
+    <div id="main" class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-push-8">
+<!--          <section>
+            <h4>Filter search for:</h4>
+            <label>Text: 
+              <input type="text" id="search" name="search" ng-model="search">
+            </label>
+          </section>
+-->          <div id="adv2" align="right">
+            <script>!function(d,l,e,s,c){e=d.createElement("script");e.src="//ad.altervista.org/js.ad/size=300X250/?ref="+encodeURIComponent(l.hostname+l.pathname)+"&r="+Date.now();s=d.scripts;c=s[s.length-1];c.parentNode.insertBefore(e,c)}(document,location)</script>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-md-pull-4">
+          <div class="warning">&nbsp;</div>
+<!--
+		  <div ng-include="'./articles.html'"></div>
+          <div ng-include="'./article.html'"></div>
+
+		  <div ng-repeat="article in articles">
+            title: {{ article.title }}
+            body: <p ng-bind-html="article.body"></p>
+		  </div>
+-->          <article>
+            <h1>Le mie ricerche</h1>
+            <p class="update">9 Novembre 2018</p>
+
+            <p>Questi sono alcuni miei appunti di informatica e non, arricchir&ograve; via via che&nbsp;ne avr&ograve; l'occasione.
+              <br>
+              Diciamo che non essendo forte in memoria, mi sono deciso a raccogliere gli argomenti pi&ugrave; e pi&ugrave; volte cercati e che ricercherei in futuro.
+              <br>
+              Quindi penso che varier&ograve; tra la programmazione, parte sistemistica.</p>
+            <p>Potrebbero apparire anche articoli sulla musica e su chissà cos'altro, ma se non vi interessano non fateci caso, sono altre mie passioni.
+              <br>
+              Se ritenete interessanti queste ricerche e volete proporre argomenti o domande su quanto gi&agrave; ricercato, scrivetemi e tenter&ograve; di rispondere arricchendo questi appunti anche per voi.</p>
+            <p>Altra cosa che per cui utilizzer&ograve; il sito &egrave; quello di tenere aggiornati (e quindi non dimenticare) i progetti avviati.
+              <br>
+              Sar&agrave; uno stimolo per tornare a riprendere in mano i vecchi progetti.</p>
+            <p>Dopo di che mi presento:<br>
+              Filippo, nato nel 1973, Toro e appassionato di qualsiasi cosa che attragga la mia attenzione per almeno 10 minuti.
+              <br>Parto un quarta sui progetti che mi appassionano di pi&ugrave; e non vedo l'ora di scoprire o sperimentare.
+              <br>Caparbio al punto di portare avanti quanto iniziato da perdere anche qualche ore di sonno.
+              <br>Purtroppo il tempo libero sempre meno e le cose interessanti sempre in crescita, rendono questa ricerca molto caotica e non produttiva (almeno in apparenza).
+              <br>A volte qualche delusione, mancanza di tempo a disposizione o di partner con cui condividere la stessa visione nei progetti, hanno reso alcuni di questi difficili da completare e ho dovuto abbandonarli in attesa di tempi migliori.</p>
+            <p>Per il momento il sito si sta sviluppando nel peggiore dei modi: sto scrivendo puro HTML direttamente nell'editor di Altervista.
+              <br>Appena avr&ograve; un po' di tempo e la versione alfa sar&agrave; pronta lo scaricher&ograve; e metter&ograve; su github.</p>
+              <p>La mia idea &egrave; di trasformarlo in un CMS.
+              <br>
+              Nel qual caso ci sar&agrave; una sezione anche per questo progetto.
+              <br>
+              Che dire, buona lettura e alla prossima gente.</p>
+          </article>
+          <div id="adv3">
+            <script>!function(d,l,e,s,c){e=d.createElement("script");e.src="//ad.altervista.org/js.ad/size=300X250/?ref="+encodeURIComponent(l.hostname+l.pathname)+"&r="+Date.now();s=d.scripts;c=s[s.length-1];c.parentNode.insertBefore(e,c)}(document,location)</script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div style="background-color: #444444; height: 100px; color: white;">
+        <p style="padding-left: 20px;">Web Site powered by Filippo Taiuti</p>
+        <p style="padding-left: 20px;">Copyright by ... Copyright? what copyright???</p>
+        <p style="padding-left: 20px;">Keep enjoying and have a fun days :D</p>
+      </div>
+    </footer>
+  </body>
+</html>
