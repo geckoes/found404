@@ -1,4 +1,4 @@
-# my_site
+# found404
 This is my project to build my website.
 I would love to transform it in a CMS in the future.
 
