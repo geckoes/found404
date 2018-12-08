@@ -1,0 +1,21 @@
+# BEGIN redirect all pages to index page
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^config\.php$ - [L]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php?var=$1 [L]
+</IfModule>
+
+# END redirect
+
+# # av:php5-engine
+AddHandler av-php5 .php
+
+php_value post_max_size 20M
+php_value upload_max_filesize 20M
+
+# # av:Toolbar
+SetEnv AV_TOOLBAR 1
